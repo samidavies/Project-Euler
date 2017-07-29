@@ -13,4 +13,18 @@ assert gcd(7,24) == 1
 def lcm(a,b):
     return a * b / gcd(a,b)
 
+def first_primes(n):
+    primes = [2]
+    check = 2
+    while len(primes) < n:
+        check += 1
+        if all(check % p != 0 for p in primes):
+            primes.append(check) 
+
+    return primes
+
+assert first_primes(5) == [2,3,5,7,11]
+
+
+
 
