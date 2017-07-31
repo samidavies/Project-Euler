@@ -23,8 +23,14 @@ def first_primes(n):
 
     return primes
 
-assert first_primes(5) == [2,3,5,7,11]
+def primes_below(n):
+    primes = [2]
+    if n < 2:
+        return []
+    for i in range(2,n):
+        if all(i % p != 0 for p in primes):
+            primes.append(i)
 
-
+    return primes
 
 
