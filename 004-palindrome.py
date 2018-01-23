@@ -21,5 +21,4 @@ def findpal():
     )
 
 
-print(findpal())
 
